@@ -10,15 +10,17 @@ import random
 
 #weight = np.random.uniform(-1, 1, (2,1))
 bias = np.array([1,round(random.uniform(-1,0), 2)])
-#X1 = np.random.randint(0,2,100)
-#X2 = np.random.randint(0,2,100)
-X1 = [0,0,1,1]*5
-X2 = [0,1,0,1]*5
+X1 = np.random.randint(0,2,20)
+X2 = np.random.randint(0,2,20)
+#X1 = [0,0,1,1]*5
+#X2 = [0,1,0,1]*5
 learningRate = 0.03
 
-andOutput = [0,0,0,1]*5 #Actual Output in AND
-orOutput = [0,1,1,1]*5  #Actual Output in OR
-xorOutput = [0,1,1,0]*5 #Actual Output in XOR
+andOutput = X1&X2
+orOutput = X1|X2
+#andOutput = [0,0,0,1]*5 #Actual Output in AND
+#orOutput = [0,1,1,1]*5  #Actual Output in OR
+#xorOutput = [0,1,1,0]*5 #Actual Output in XOR
 
 Y = np.zeros(20)
 E = np.ones(20)
